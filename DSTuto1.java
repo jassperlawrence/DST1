@@ -33,6 +33,26 @@ public class DSTuto1 {
         }
         else
            System.out.println("MPlan is cheaper compared to DPlan"); 
+        
+        //No.4 T1
+        String[]brand={"iPhone","Samsung","Nokia","LG"};
+            int[]cost={2400,2200,1400,1800};
+            ArrayList<SmartPhone>a1=new ArrayList<SmartPhone>();
+            a1.add(new SmartPhone("iPhone",2400));
+            a1.add(new SmartPhone("Samsung",2200));
+            a1.add(new SmartPhone("Nokia",1400));
+            a1.add(new SmartPhone("LG",1800));
+            //Unsorted
+            System.out.println("List of Smart Phone:");
+            for (SmartPhone a : a1) {
+                System.out.print(a.name+" ("+a.cost+") ");
+            }
+            
+            Collections.sort(a1);
+            System.out.println("\nList of Smart Phone in ascending order according to price");
+            for (SmartPhone a : a1) {
+                System.out.print(a.name+" ("+a.cost+") ");
+            }
     }
     
 }
